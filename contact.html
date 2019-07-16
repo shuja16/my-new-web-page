@@ -11,10 +11,11 @@
             margin: 0px;
         }
         header {
-            background-color: aqua;
             height: 100px;
             display: flex;
-            justify-content: flex-end;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
             
         }
         nav {
@@ -30,6 +31,7 @@
             display: inline-block;
             padding: 20px;
             margin: 0 20px 0 0;
+            border-radius: 10px;
             background:#eee;
         }
 
@@ -63,25 +65,41 @@
             padding: 2em;
         }
         
+        /* Style the buttons */
+.btn { 
+  background-color: whitesmoke  ;
+  cursor: pointer;
+
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active, 
+.btn:hover {
+  background-color:#ff5f52;
+  color:whitesmoke;
+}
     </style>
 
 </head>
 
 <body>
     
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="policies.html">Our Policies</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>  
-      
-      </header>
-
+        <header>
+                <div class="logo">
+                        <a href="index.html"> <img src="logo.png" alt="CSGO Howl"/> </a>
+                </div>
+                <div class="navigation">
+                        <div id="myDIV">
+                    <ul>
+                        <li class="btn" id="index"><a href="index.html">Home</a></li>
+                        <li class="btn" id="services"><a href="services.html">Our Services</a></li>
+                        <li class="btn" id="about"><a href="about.html">About Us</a></li>
+                        <li class="btn" id="policies"><a href="policies.html">Our Policies</a></li>
+                        <li class="btn" id="contact"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </header>
 
 
     <section>
@@ -98,6 +116,10 @@
         </section>
 
         <footer> footer </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="custom.js"></script>
+
 
 </body>
 </html>
