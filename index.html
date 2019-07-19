@@ -130,14 +130,27 @@
     }
 }
 
-.topSection{
+.topSection {
     min-height: 40px;
     background: #67daff;
     padding: 5px;
 }
-.container{
-    width: 1170px;
+
+.topSection {
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    min-width: 158px;
+    position: relative;
+}
+
+.topSection a {
+    padding-right: 20px;
+}
+
+.topSection a:first-child {
+    margin-right: 20em;
 }
 
 /* Main Banner image */
@@ -224,12 +237,10 @@
 <body>
 
 <!-- Top Section -->
-<div class="topSection">        
-    <div class="container">
-        <ul>
-            <li><a href="#"><i class="fas fa-envelope"></i> info@helloworld.com</a></li>
-            <li><a href="#"><i class="far fa-address-book"></i> 0000-0000000</a></li>
-        </ul>
+<div class="container-fluid">
+    <div class="topSection">        
+            <a href="#"><i class="fas fa-envelope"></i> info@helloworld.com</a>
+            <a href="#"><i class="far fa-address-book"></i> 0000-0000000</a>
     </div>
 </div>
 <!-- End Top Section -->
