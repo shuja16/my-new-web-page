@@ -37,12 +37,13 @@
             border-radius: 10px;
         }
      
-
-        section {
-            background-color: royalblue;
-            height: 100vh;
-            
-        }
+        .container{
+    width: 1170px;
+    margin: 0 auto;
+}
+        /* section {
+            background-color: royalblue;    
+        } */
 
         footer {
             background-color: aqua;
@@ -51,8 +52,7 @@
 
         body {
             opacity: 1;
-       
-            background: url('bg 3.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg 3.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0px;
@@ -70,10 +70,11 @@
             padding: 2em;
         }
 
-/* Style the buttons */
 .btn { 
   background-color: whitesmoke;
   cursor: pointer;
+  font-family: Lato,sans-serif;
+  font-weight: bold;
 }
 
 /* Style the active class (and buttons on mouse-over) */
@@ -83,7 +84,7 @@
   color:whitesmoke;
 }
 
-/*#slider {
+#slider {
     overflow:hidden;
 }
 #slider figure {
@@ -128,46 +129,115 @@
     100% {
         left: -400%
     }
-}*/
+}
 
-.topSection{
+.topSection {
     min-height: 40px;
     background: #67daff;
     padding: 5px;
 }
-.container{
-    width: 1170px;
+
+.topSection {
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    min-width: 158px;
+    position: relative;
 }
 
-ul.breadcrumb {
-    padding: 1px 1px;
+.topSection a {
+    padding-right: 20px;
+}
+
+.topSection a:first-child {
+    margin-right: 20em;
+}
+
+/* Main Banner image */
+.mainbanner {
+  /* Use "linear-gradient" to add a darken background effect to the image*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bg 3.jpg");
+
+  /* Set a specific height */
+  height: 600px;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+
+
+
+.logo img{
+    width: 100%;
+    height: none;
+}
+
+.maintext .title1 {
+    color: #fff;
+    font-size: 48px;
+    margin: 0 0 5px;
+    font-weight: 700;
+    display: block;
+}
+
+.maintext .title2 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-family: Lato,sans-serif;
+    text-transform: uppercase;
+    display: block;
+}
+
+.maintext .title3 {
+    font-size: 28px;
+    margin: 0 0 55px;
+    font-weight: 500;
+    font-family: Lato,sans-serif;
+    color: #36c0ca;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* .column-content{
     list-style: none;
-    text-align: right;
+} */
+
+.column-content span {
+    left:0px;
+    top:0px;
+    text-align: left;
+    color: red;
+    background: #333e5a;
+    padding: 0 10px;
+    color: #36c0ca;
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
-.breadwrap{
-    background-color: #67daff;
+.column-content p {
+    color: #9ba8c7;
 }
 
-ul.breadcrumb li {
-  display: inline-block;
-  font-size: 18px;
+.column-text {
+    width: 500px;
+}
 
+.ContentWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
 }
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: "/\00a0";
-}
-ul.breadcrumb li a {
-  color: #0275d8;
-  text-decoration: none;
-}
-ul.breadcrumb li a:hover {
-  color: #01447e;
-  text-decoration: underline;
-}
+
     </style>
 
 </head>
@@ -175,12 +245,10 @@ ul.breadcrumb li a:hover {
 <body>
 
 <!-- Top Section -->
-<div class="topSection">        
-    <div class="container">
-        <ul>
-            <li><a href="#"><i class="fas fa-envelope"></i> info@helloworld.com</a></li>
-            <li><a href="#"><i class="far fa-address-book"></i> 0000-0000000</a></li>
-        </ul>
+<div class="container-fluid">
+    <div class="topSection">        
+            <a href="#"><i class="fas fa-envelope"></i> info@helloworld.com</a>
+            <a href="#"><i class="far fa-address-book"></i> 0000-0000000</a>
     </div>
 </div>
 <!-- End Top Section -->
@@ -203,7 +271,7 @@ ul.breadcrumb li a:hover {
                 </div>
             </header>
 
-    <!-- <div id="slider">
+    <div id="slider">
         <figure>
             <img src="slider1.jpg">
             <img src="slider2.jpg">
@@ -211,31 +279,41 @@ ul.breadcrumb li a:hover {
             <img src="slider4.jpg">
             <img src="slider5.jpg">
         </figure>
-    </div> -->
+    </div>
     
     <section>
-
-    <div class="breadwrap">
-            <div class="container">
-                    <ul class="breadcrumb"> 
-                            <li><a href="index.html">Home</a></li></li>
-                            <li>Our Services</li>
-                            </ul>
-             </div>
-    </div>
-
-        <h1 class="custom-header">Our Services</h1>
-
+        <div class="ContentWrap">
+            <div class="column-text">
+                <div class="maintext">
+                    <h1>
+                        <span class="title1">The Editors Club</span> 
+                        <span class="title2">The Editors Club</span>
+                        <span class="title3">The Editors Club</span> 
+                    </h1>
+                </div>
         
-        <h2 style="font-weight: 100; font-style: italic; color: yellowgreen;">About Me! </h2>
-        
-        <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: yellow;">
+                <div class="column-content">
+                    <div>
+                        <span>Quality</span>
+                        <p>"Get your essays done at the cheapest rate and highest quality."</p>
+    
+                        <span>Quality</span>
+                        <p>"Get your essays done at the cheapest rate and highest quality."</p>
+    
+                        <span>Quality</span>
+                        <p>"Get your essays done at the cheapest rate and highest quality."</p>
+                        
+                        <span>Quality</span>
+                        <p>"Get your essays done at the cheapest rate and highest quality."</p>
+                    </div>
+                </div>
+            </div>
 
-              <em> I am a person who is positive about every aspect of life. There are many things I like to do, to see, and to experience. I like to read, I like to write; I like to think, I like to dream; I like to talk, I like to listen. I like to see the sunrise in the morning, I like to see the moonlight at night; I like to feel the music flowing on my face, I like to smell the wind coming from the ocean. I like to look at the clouds in the sky with a blank mind, I like to do thought experiment when I cannot sleep in the middle of the night. I like flowers in spring, rain in summer, leaves in autumn, and snow in winter. I like to sleep early, I like to get up late; I like to be alone, I like to be surrounded by people. I like country’s peace, I like metropolis’ noise; I like the beautiful west lake in Hangzhou, I like the flat cornfield in Champaign. I like delicious food and comfortable shoes; I like good books and romantic movies. I like the land and the nature, I like people. And, I like to laugh. </em> 
-
-        </p>
-        <a href="https://media.wired.com/photos/5a207b8740ed7f46060c7dda/master/w_2400,c_limit/lucid-roundup-TA.jpg">Check This Image</a>
-        </section>
+            <div class="column-content-Img">
+                <img src="1.jpg" alt="">
+            </div>
+        </div>
+    </section>
 
         <footer> footer </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/js/all.js" integrity="sha256-S1WJaJce5DQaJRMMO9igZPd6WRgObuRlQXE8i7yKOd8=" crossorigin="anonymous"></script>
